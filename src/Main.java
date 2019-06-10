@@ -17,7 +17,7 @@ public class Main {
 		Game game = new Game();
 		game.setOptions(options);
 		DisplayManager displayManager = new DisplayManager();
-
+        //start
 		// ゲームの開始
 		displayManager.start(game);
 	}
