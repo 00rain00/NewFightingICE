@@ -1,5 +1,8 @@
 import core.Game;
 import manager.DisplayManager;
+import EventRecorder.*;
+
+import java.awt.*;
 
 /**
  * FightingICEのメインメソッドを持つクラス．
@@ -15,10 +18,18 @@ public class Main {
 	 */
 	public static void main(String[] options) {
 		Game game = new Game();
+		options = new String[2];
+		options[0]="--mute";
+		//options[1]="--fastmode";
+		options[1]="--json";
 		game.setOptions(options);
 		DisplayManager displayManager = new DisplayManager();
         //start
+		//start2
 		// ゲームの開始
 		displayManager.start(game);
+		//
+		EventRecorder ev = new EventRecorder();
+		ev.start();
 	}
 }
